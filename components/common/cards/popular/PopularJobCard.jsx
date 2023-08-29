@@ -34,9 +34,8 @@ const PopularJobCard = ({ item, selectedJob, handleCardPress }) => {
       <Text style={styles.location}>{item.job_country}</Text>
 
     </View>
-
+    
    </TouchableOpacity>
-   
   )
 }
 
