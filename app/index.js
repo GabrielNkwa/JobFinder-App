@@ -10,7 +10,7 @@ import { Nearbyjobs, Popularjobs, PopularJobs, ScreenHeaderBtn, Welcome } from '
 const Home = () => {
 
     const router = useRouter();
-
+  const [searchTerm, setSearchTerm] = useState("")
 
 
    
@@ -38,6 +38,14 @@ const Home = () => {
     }}
     >
         <Welcome
+            searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm}
+            handleClick={() => {
+                if(searchTerm){
+                    router.push(`/search/${searchTerm}`)
+                }
+            }}
+
         />
 
         <Popularjobs/>
